@@ -29,6 +29,7 @@ For i = n To 2 Step -1
         Cells(i, 2).Offset(0, -1).Resize(1, 3).Copy Cells(Rows.Count, "e").End(xlUp).Offset(1, 0)
         x = x + 1
         If x = 3 Then Exit For
+        End If
     End If
 Next i
 MsgBox "数据处理完毕"

@@ -38,6 +38,7 @@ End Sub
 
 
 ## 2.写一个循环判断是否正确填写自己生日的对话框
+特别注意如果漏写了end if，系统会提示loop没有do。
 ```
 Sub test()
 Dim n As Date

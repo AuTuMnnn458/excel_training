@@ -1,4 +1,4 @@
-# excel_training
+# Excel_training
 This is my excel training including some tests for excel function using.
 主要记录在学习vba过程中解决的一些excel实例。
 

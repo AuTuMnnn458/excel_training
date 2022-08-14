@@ -35,3 +35,28 @@ Next i
 MsgBox "数据处理完毕"
 End Sub
 ```
+
+
+## 2.写一个循环判断是否正确填写自己生日的对话框
+```
+Sub test()
+Dim n As Date
+On Error Resume Next
+Do
+    n = InputBox("请输入我的生日(yyyy-mm-dd)")
+    If Err.Number <> 0 Then
+        MsgBox "输入格式有误": GoTo 1
+    End If
+    
+    If n = "1997-08-03" Then
+        MsgBox "回答正确，循环结束"
+        Exit Do
+    Else
+        MsgBox "回答错误，请继续回答"
+    End If
+1:
+    Err.Clear
+
+Loop
+End Sub
+```

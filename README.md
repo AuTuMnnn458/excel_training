@@ -20,3 +20,17 @@ For i = n To 2 Step -1
 Next i
 End Sub
 ```
+代码优化：
+```
+Sub test()
+n = Cells(Rows.Count, 1).End(xlUp).Row
+For i = n To 2 Step -1
+    If Cells(i, 2) = "牛肉" Then
+        Cells(i, 2).Offset(0, -1).Resize(1, 3).Copy Cells(Rows.Count, "e").End(xlUp).Offset(1, 0)
+        x = x + 1
+        If x = 3 Then Exit For
+    End If
+Next i
+MsgBox "数据处理完毕"
+End Sub
+```

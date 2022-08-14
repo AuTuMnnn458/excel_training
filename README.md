@@ -61,3 +61,14 @@ Do
 Loop
 End Sub
 ```
+
+
+## 3.用工作表函数实现求平均和计数
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/QQ%E6%88%AA%E5%9B%BE20220814173344.jpg)
+
+```
+Sub test()
+[c23] = Application.WorksheetFunction.AverageIf([b:b], "牛肉", [c:c])
+[c24] = Application.WorksheetFunction.CountIfs([b:b], "牛肉", [c:c], ">50")
+End Sub
+```

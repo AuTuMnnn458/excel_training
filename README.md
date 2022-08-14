@@ -69,6 +69,6 @@ End Sub
 ```
 Sub test()
 [c23] = Application.WorksheetFunction.AverageIf([b:b], "牛肉", [c:c])
-[c24] = Application.WorksheetFunction.CountIfs([b:b], "牛肉", [c:c], ">50")
+[c24] = Application.WorksheetFunction.CountIfs([b:b], "猪肉", [c:c], ">50")
 End Sub
 ```

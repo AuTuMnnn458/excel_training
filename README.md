@@ -72,3 +72,26 @@ Sub test()
 [c24] = Application.WorksheetFunction.CountIfs([b:b], "猪肉", [c:c], ">50")
 End Sub
 ```
+
+
+## 4.三数之和
+！[image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.jpg)
+经典算法题三数之和 \n
+方法一：暴力解法，随机数生成3个指针，然后使用do loop循环
+```
+Sub test()
+Dim s1%, s2%, s3%, n%, h%, k%
+n = Cells(Rows.Count, 1).End(xlUp).Row
+Do
+s1 = Int((n - 2 + 1) * Rnd + 2)
+s2 = Int((n - 2 + 1) * Rnd + 2)
+s3 = Int((n - 2 + 1) * Rnd + 2)
+h = Cells(s1, 1) + Cells(s2, 1) + Cells(s3, 1)
+k = k + 1
+Loop Until h = [b2]
+Cells(s1, 1).Interior.ColorIndex = 3
+Cells(s2, 1).Interior.ColorIndex = 3
+Cells(s3, 1).Interior.ColorIndex = 3
+MsgBox "循环了" & k & "次"
+End Sub
+```

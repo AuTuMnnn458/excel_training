@@ -75,7 +75,7 @@ End Sub
 
 
 ## 4.三数之和
-！[image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.jpg)
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E9%A2%981.jpg)
 经典算法题三数之和 \n
 方法一：暴力解法，随机数生成3个指针，然后使用do loop循环
 ```

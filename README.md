@@ -126,7 +126,8 @@ End Sub
 要求：不能重复抓。
 
 注意：这里7可以整除21，也可以写一个判断处理不整除的情况。
-![image]https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E6%8A%93%E4%BA%BA%E5%88%86%E7%BB%84.jpg）
+
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E6%8A%93%E4%BA%BA%E5%88%86%E7%BB%84.jpg）
 
 ```
 Sub test()

@@ -122,7 +122,7 @@ Cells(t, 1).Interior.ColorIndex = 3
 MsgBox "用时" & Timer - s & "秒"
 End Sub
 ```
-## 4.抓人分组
+## 5.抓人分组
 要求：不能重复抓。
 
 注意：这里7可以整除21，也可以写一个判断处理不整除的情况。

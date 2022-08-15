@@ -122,3 +122,24 @@ Cells(t, 1).Interior.ColorIndex = 3
 MsgBox "用时" & Timer - s & "秒"
 End Sub
 ```
+## 4.抓人分组
+要求：不能重复抓。
+
+注意：这里7可以整除21，也可以写一个判断处理不整除的情况。
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E6%8A%93%E4%BA%BA%E5%88%86%E7%BB%84.jpg）
+
+```
+Sub test()
+Dim gp%, y%, s%, h%
+y = Application.WorksheetFunction.CountA([a:a])
+Do
+s = Int((y - 2 + 1) * Rnd + 2)
+h = Cells(Rows.Count, 2).End(xlUp).Row
+Set b = range("b:b").Find(Cells(s, 1))
+If b Is Nothing Then
+    Cells(h + 1, 2) = Cells(s, 1)
+    gp = gp + 1
+End If
+Loop Until gp = 7
+End Sub
+```

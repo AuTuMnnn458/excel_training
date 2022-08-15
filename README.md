@@ -97,3 +97,28 @@ Cells(s3, 1).Interior.ColorIndex = 3
 MsgBox "循环了" & k & "次"
 End Sub
 ```
+
+
+方法二：哈希表，用两个指针，要求的值减掉这两个指针所指向的值后，剩下的值与表中的数做匹配。
+```
+Dim i%, y%, x&, n&, c&
+On Error Resume Next
+s = Timer
+n = Cells(Rows.Count, 1).End(xlUp).Row
+For i = 2 To n
+    For y = 3 To n
+        x = Cells(i, 1) + Cells(y, 1)
+        If x < [b2] Then
+            c = [b2] - x
+            t = Application.WorksheetFunction.Match(c, [a:a], 0)
+            If t >= 1 Then GoTo 1
+        End If
+    Next y
+Next i
+1:
+Cells(i, 1).Interior.ColorIndex = 3
+Cells(y, 1).Interior.ColorIndex = 3
+Cells(t, 1).Interior.ColorIndex = 3
+MsgBox "用时" & Timer - s & "秒"
+End Sub
+```

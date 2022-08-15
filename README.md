@@ -3,7 +3,7 @@ This is my excel training including some tests for excel function using.
 主要记录在学习vba过程中解决的一些excel实例。
 
 ## 1.找出文档左边数据中最近3次购买牛肉的记录并存放在右边。
-![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E9%A2%981.jpg)
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/1.jpg)
 
 ```
 Sub test()
@@ -64,7 +64,7 @@ End Sub
 
 
 ## 3.用工作表函数实现求平均和计数
-![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E9%A2%983.jpg)
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/3.jpg)
 
 ```
 Sub test()
@@ -75,7 +75,7 @@ End Sub
 
 
 ## 4.三数之和
-![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.jpg)
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/4.jpg)
 
 经典算法题三数之和
 
@@ -127,7 +127,7 @@ End Sub
 
 注意：这里7可以整除21，也可以写一个判断处理不整除的情况。
 
-![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/%E6%8A%93%E4%BA%BA%E5%88%86%E7%BB%84.jpg）
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/5.jpg）
 
 ```
 Sub test()

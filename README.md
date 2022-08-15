@@ -127,7 +127,7 @@ End Sub
 
 注意：这里7可以整除21，也可以写一个判断处理不整除的情况。
 
-![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/5.jpg）
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/5.jpg)
 
 ```
 Sub test()

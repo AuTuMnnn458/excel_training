@@ -144,3 +144,28 @@ End If
 Loop Until gp = 7
 End Sub
 ```
+
+
+## 6.按照公司筛选数据，同时把筛选好的数据存放到同文件夹下的新文档中。
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/6.jpg)
+```
+Sub test()
+Dim x As Byte, f As Range, ws As Workbook
+Range("a2", Cells(Rows.Count, 1).End(xlUp)).Copy [h1]
+Range("h:h").RemoveDuplicates Columns:=1, Header:=xlNo
+x = Application.WorksheetFunction.CountA([h:h])
+Do
+y = y + 1
+Range("a1").AutoFilter 1, Cells(y, "h")
+Set f = Range("a1").CurrentRegion
+Set wb = Workbooks.Add
+f.Copy wb.Sheets(1).[a1]
+wb.SaveAs ThisWorkbook.Path & "\" & ThisWorkbook.Sheets("sheet1").Cells(y, "h")
+wb.Close
+Loop Until y = x
+
+Sheets("sheet1").AutoFilterMode = False
+[h:h].Delete
+End Sub
+```
+

@@ -169,3 +169,23 @@ Sheets("sheet1").AutoFilterMode = False
 End Sub
 ```
 
+## 7.用并集和交集完成一些任务
+![image](https://github.com/AuTuMnnn458/excel_training/blob/main/pictures/7.jpg)
+
+```
+Sub test()
+Dim ss As Range, ss1 As Range
+For Each ss In Range("c2", Cells(Rows.Count, 3).End(xlUp))
+    If ss.Value >= 5000 Then
+        If ss1 Is Nothing Then Set ss1 = ss.Offset(0, -2).Resize(1, 3)
+            Set ss1 = Union(ss1, ss.Offset(0, -2).Resize(1, 3))
+    End If
+Next ss
+ss1.Copy [g1]
+ss1.Interior.ColorIndex = 3
+[e3] = ss1.Count / 3 'ssl.count是整个表格的单元格数量
+[e4] = Application.WorksheetFunction.Sum(Intersect(ss1, [c:c]))
+[e5] = Application.WorksheetFunction.Average(Intersect(ss1, [c:c]))
+End Sub
+```
+
